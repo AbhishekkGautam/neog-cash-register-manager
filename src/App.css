@@ -1,38 +1,140 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #bef264;
+  --secondary-color: #a3e635;
+  --light-green: #f7fee7;
+  --dark-green: #3f6212;
+  --output-color: #e6fcbe;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  margin: 0px;
+  background-color: var(--light-green);
+}
+
+/* container */
+.container {
+  padding: 0rem 1rem;
+}
+.container-center {
+  max-width: 450px;
+  margin: auto;
+}
+
+/* section */
+.section {
+  padding: 0rem 1.5rem;
+}
+.section-center {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+/* header */
+.hero {
+  padding: 2rem;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .hero-heading {
+  color: var(--dark-green);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container input {
+  width: 90%;
+  min-width: 320px;
+  min-height: 20px;
+  padding: 1rem;
+  font-family: "DM Sans", sans-serif;
+  border: 1px solid var(--dark-green);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container button {
+  display: block;
+  padding: 0.6rem 2rem;
+  background-color: var(--primary-color);
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+}
+
+.container button:hover {
+  background-color: var(--secondary-color);
+}
+
+.output-div {
+  width: 90%;
+  min-height: auto;
+  background-color: var(--output-color);
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+
+.output-div p {
+  margin-top: 0rem;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 1.5rem;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+  text-align: center;
+  border: 1px solid var(--dark-green);
+  color: var(--dark-green);
+}
+
+#output {
+  margin: 1rem 0;
+}
+
+.noOfNotes {
+  background-color: white;
+}
+
+.bill-amount {
+  margin-top: 1.5rem;
+  max-width: 100%;
+}
+
+.error {
+  background-color: #fecaca;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  color: rgb(44, 44, 44);
+  margin-top: 0.5rem;
+}
+
+.cash-given {
+  margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 520px) {
+  .hero {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .section {
+    padding: 0rem 0.5rem;
   }
-  to {
-    transform: rotate(360deg);
+  .container input {
+    min-width: 290px;
   }
 }
