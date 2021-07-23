@@ -77,7 +77,7 @@ function App() {
   //function to find no.of notes
   function calculateNotes(cash, bill) {
     let diff = cash - bill;
-    notesArray.map((note) => {
+    notesArray.forEach((note) => {
       let noteNo = Number(note);
       if (diff >= noteNo) {
         let count = Math.floor(diff / noteNo);
