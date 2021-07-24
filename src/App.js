@@ -11,9 +11,12 @@ let noteBank = {
   2000: "",
 };
 
+let billAmount = "";
+let cashGiven = "";
+
 function App() {
-  const [billAmount, setBillAmount] = useState("");
-  const [cashGiven, setCashGiven] = useState("");
+  // const [billAmount, setBillAmount] = useState("");
+  // const [cashGiven, setCashGiven] = useState("");
   const [noOfNotes, setNoOfNotes] = useState(noteBank);
   const [cashGivenDiv, setCashGivenDiv] = useState("none");
   const [errorDisplay, setErrorDisplay] = useState(["none", ""]);
@@ -25,11 +28,11 @@ function App() {
   });
 
   const billAmountInputHandler = (e) => {
-    setBillAmount(Number(e.target.value));
+    billAmount = Number(e.target.value);
   };
 
   const cashGivenInputHandler = (e) => {
-    setCashGiven(Number(e.target.value));
+    cashGiven = Number(e.target.value);
   };
 
   const nextBtnHandler = () => {
