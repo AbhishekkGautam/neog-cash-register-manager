@@ -12,8 +12,8 @@ let noteBank = {
 };
 
 function App() {
-  const [billAmount, setBillAmount] = useState(0);
-  const [cashGiven, setCashGiven] = useState(0);
+  const [billAmount, setBillAmount] = useState("");
+  const [cashGiven, setCashGiven] = useState("");
   const [noOfNotes, setNoOfNotes] = useState(noteBank);
   const [cashGivenDiv, setCashGivenDiv] = useState("none");
   const [errorDisplay, setErrorDisplay] = useState(["none", ""]);
@@ -55,6 +55,7 @@ function App() {
           setErrorDisplay(["none", ""]);
           setOutputDisplay("block");
           calculateNotes(cashGiven, billAmount);
+
           return;
         } else {
           setOutputDisplay("none");
@@ -107,6 +108,7 @@ function App() {
           <div className="bill-amount">
             <input
               type="number"
+              value={billAmount}
               onChange={billAmountInputHandler}
               placeholder="Enter bill amount"
             />
@@ -120,14 +122,23 @@ function App() {
           <div style={{ display: `${cashGivenDiv}` }} className="cash-given">
             <input
               type="number"
+              value={cashGiven}
               onChange={cashGivenInputHandler}
               placeholder="Enter cash given"
             />
-            <button onClick={checkBtnHandler}>Check</button>
+            <button onClick={checkBtnHandler} type="submit">
+              Check
+            </button>
           </div>
           {/* Output */}
           <div style={{ display: `${outputDisplay}` }} className="output-div">
-            <p className="label">Return Change: {cashGiven - billAmount}</p>
+            <div className="summary">
+              <span>Bill Amount: {billAmount}</span>
+              <span style={{ marginLeft: "1rem" }}>
+                Cash Given: {cashGiven}
+              </span>
+            </div>
+            <p>Return Change: {cashGiven - billAmount}</p>
             <div id="output">
               <table>
                 <tbody>

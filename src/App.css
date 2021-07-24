@@ -30,8 +30,7 @@ body {
 .section-center {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: baseline;
 }
 
 /* header */
@@ -51,7 +50,7 @@ body {
 
 .container input {
   width: 90%;
-  min-width: 320px;
+  min-width: 400px;
   min-height: 20px;
   padding: 1rem;
   font-family: "DM Sans", sans-serif;
@@ -76,23 +75,24 @@ body {
 .output-div {
   width: 90%;
   min-height: auto;
-  background-color: var(--output-color);
-  margin-top: 2.5rem;
+  /* background-color: var(--output-color); */
+  margin-top: 3rem;
   margin-bottom: 3rem;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
 .output-div p {
-  margin-top: 0rem;
+  margin-top: 2rem;
 }
 
-table {
+.container table {
   width: 100%;
+  min-width: 400px;
   table-layout: fixed;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 }
 
-table,
+.container table,
 td,
 th {
   border-collapse: collapse;
@@ -120,10 +120,18 @@ th {
   border-radius: 0.3rem;
   color: rgb(44, 44, 44);
   margin-top: 0.5rem;
+  display: inline;
 }
 
 .cash-given {
   margin-top: 0.5rem;
+}
+
+.summary span {
+  font-size: smaller;
+  background-color: var(--output-color);
+  color: black;
+  padding: 0.5rem 1rem;
 }
 
 @media only screen and (max-width: 520px) {
@@ -136,5 +144,8 @@ th {
   }
   .container input {
     min-width: 290px;
+  }
+  .container table {
+    min-width: 350px;
   }
 }
