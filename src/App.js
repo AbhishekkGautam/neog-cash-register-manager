@@ -53,7 +53,7 @@ function App() {
             return;
           }
           setErrorDisplay(["none", ""]);
-          setOutputDisplay("flex");
+          setOutputDisplay("block");
           calculateNotes(cashGiven, billAmount);
 
           return;
@@ -108,7 +108,6 @@ function App() {
           <div className="bill-amount">
             <input
               type="number"
-              value={billAmount}
               onChange={billAmountInputHandler}
               placeholder="Enter bill amount"
             />
@@ -122,7 +121,6 @@ function App() {
           <div style={{ display: `${cashGivenDiv}` }} className="cash-given">
             <input
               type="number"
-              value={cashGiven}
               onChange={cashGivenInputHandler}
               placeholder="Enter cash given"
             />
