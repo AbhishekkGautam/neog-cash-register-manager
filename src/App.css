@@ -36,6 +36,7 @@ body {
 /* header */
 .hero {
   padding: 2rem;
+  padding-left: 1rem;
   padding-top: 3rem;
   display: flex;
   flex-direction: column;
@@ -138,6 +139,7 @@ th {
   .hero {
     padding-top: 2rem;
     padding-bottom: 1rem;
+    padding-left: 0rem;
   }
   .section {
     padding: 0rem 0.5rem;
