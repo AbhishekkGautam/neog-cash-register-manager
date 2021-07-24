@@ -53,7 +53,7 @@ function App() {
             return;
           }
           setErrorDisplay(["none", ""]);
-          setOutputDisplay("block");
+          setOutputDisplay("flex");
           calculateNotes(cashGiven, billAmount);
 
           return;
@@ -98,13 +98,13 @@ function App() {
       </header>
       <section className="section">
         <div className="container container-center section-center">
-          <p>
+          <p style={{ textAlign: "center", padding: "0rem 1rem" }}>
             Enter the bill amount and cash given by the customer and know
             minimum number of notes to return.
           </p>
-          <p style={{ display: `${errorDisplay[0]}` }} className="error">
-            {errorDisplay[1]}
-          </p>
+          <div style={{ display: `${errorDisplay[0]}` }} className="error">
+            <span>{errorDisplay[1]}</span>
+          </div>
           <div className="bill-amount">
             <input
               type="number"
