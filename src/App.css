@@ -137,6 +137,30 @@ th {
   padding: 0.5rem 1rem;
 }
 
+.footer {
+  width: 90%;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+  border: none;
+}
+
+.footer a {
+  color: dodgerblue;
+}
+
+.footer .list-non-bullet {
+  list-style: none;
+}
+.footer .list-item-inline {
+  display: inline;
+  padding: 0rem 0.8rem;
+  border: none;
+}
+
 @media only screen and (max-width: 520px) {
   .hero {
     padding-top: 2rem;
